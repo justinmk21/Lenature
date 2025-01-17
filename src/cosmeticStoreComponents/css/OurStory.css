@@ -1,0 +1,53 @@
+.story-section {
+  position: relative;
+}
+
+.story-section h1 {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 42px;
+}
+
+.story-image {
+    background-image: url("../images/OurStory.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: auto;
+    border-radius: 0px;
+}
+
+.video-btn {
+    position: absolute;
+    max-width: 180px;
+    height: 52px;
+    padding: 0 20px;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #171A1FFF;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+    gap: 8px;
+    bottom: 64px;
+    right: 240px;
+}
+
+.video-btn:hover {
+    cursor: pointer;
+    color: #FFFFFFFF;
+    background: #262A33FF;
+  }
+
+.video-btn:hover:active {
+    color: #FFFFFFFF;
+    background: #323842FF;
+  }
+
+.video-btn:disabled {
+    opacity: 0.4;
+  }

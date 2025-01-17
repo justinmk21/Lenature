@@ -1,0 +1,30 @@
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 240px;
+}
+
+.benefits-img {
+    width: 557px;
+    height: 696px;
+    border-radius: 8px;
+}
+
+.benefits p {
+    width: 495px;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #323842FF;
+    margin-bottom: 24px;
+}
+
+.benefits h5 {
+    width: 495px;
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323842FF;
+}

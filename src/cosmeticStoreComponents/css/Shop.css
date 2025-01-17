@@ -1,0 +1,428 @@
+.shop-img {
+    position: relative;
+    background-image: url('../images/ShopImg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 390px;width: 1920px;
+}
+
+.shop-img h1 {
+    position: absolute;
+    margin-left: 240px;
+    top: 82px;
+}
+
+.shop-img p {
+    position: absolute;
+    width: 447px;
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #323842FF;
+    margin-left: 240px;
+    top: 172px;
+}
+
+.shop-nav-section {
+    display: flex;
+    max-width: 540px;
+}
+
+.shop-nav-section button {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    background: #FFFFFFFF;
+    opacity: 1;
+    border-radius: 4px;
+}
+
+
+.shop-nav-section button:nth-child(1) {
+    position: relative;
+    width: 180px;
+    height: 52px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+    opacity: 1;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+  }
+
+.shop-nav-section button:nth-child(1):hover {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.shop-nav-section button:nth-child(1):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.shop-nav-section button:nth-child(1):disabled {
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 0.4;
+  }
+
+.shop-nav-section button:nth-child(2) {
+    position: relative;
+    width: 180px;
+    height: 52px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 1;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+  }
+
+.shop-nav-section button:nth-child(2):hover {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.shop-nav-section button:nth-child(2):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.shop-nav-section button:nth-child(2):disabled {
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 0.4;
+  }
+
+.shop-nav-section button:nth-child(3) {
+    position: relative;
+    width: 180px;
+    height: 52px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 1;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+  }
+
+.shop-nav-section button:nth-child(3):before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 1px;
+    height: 26px;
+    background: #C5E6D9FF;
+  }
+
+.shop-nav-section button:nth-child(3):hover {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.shop-nav-section button:nth-child(3):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.shop-nav-section button:nth-child(3):disabled {
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 0.4;
+  }
+
+.search-bar-shop {
+    display: flex;
+    align-items: center;
+    top: 12px;
+    opacity: 0.4;
+    border-radius: 4px;
+    border-bottom: 1px solid #BCC1CAFF;
+    max-width: 235px;
+}
+
+.search-bar-shop input {
+    width: 235px;
+    height: 52px;
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    background: #FFFFFFFF;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-width: 0px;
+    box-shadow: 0 1px 0 #bcc1ca;
+    outline: none;
+}
+
+.sort-btn {
+    width: 133px;
+    height: 52px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #565E6CFF;
+    background: #F3F4F6FF;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+    gap: 8px;
+    margin-left: 24px;
+}
+
+.sort-btn:hover {
+    cursor: pointer;
+    color: #565E6CFF;
+    background: #DEE1E6FF;
+  }
+
+.sort-btn:hover:active {
+    color: #565E6CFF;
+    background: #CFD2DAFF;
+  }
+
+.sort-btn:disabled {
+    opacity: 0.4;
+  }
+
+.sort-icon {
+    width: 24px;
+    height: 24px;
+    fill: #565E6CFF;
+    margin-left: 6px;
+}
+
+.bottom-nav-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+
+.bottom-nav-section button:nth-child(1) {
+  width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 18px;
+  gap: 0px;
+}
+.bottom-nav-section button:nth-child(1) .icon {
+  width: 16px;
+  height: 16px;
+  fill: #9095A0FF;
+}
+
+.bottom-nav-section button:nth-child(1):hover {
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(1):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(1):disabled {
+  opacity: 0.4;
+}
+
+.bottom-nav-section button:nth-child(2) {
+  width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+}
+
+.bottom-nav-section button:nth-child(2):hover {
+  cursor: pointer;
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(2):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(2):disabled {
+  opacity: 0.4;
+}
+
+.bottom-nav-section button:nth-child(3) {
+  width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+}
+
+.bottom-nav-section button:nth-child(3):hover {
+  cursor: pointer;
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(3):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(3):disabled {
+  opacity: 0.4;
+}
+
+.bottom-nav-section button:nth-child(4) {
+  width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+}
+
+.bottom-nav-section button:nth-child(4):hover {
+  cursor: pointer;
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(4):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(4):disabled {
+  opacity: 0.4;
+}
+
+.bottom-nav-section button:nth-child(5) {
+  width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+}
+
+.bottom-nav-section button:nth-child(5):hover {
+  cursor: pointer;
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(5):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(5):disabled {
+  opacity: 0.4;
+}
+
+.bottom-nav-section button:nth-child(6) {
+  width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9095A0FF;
+  background: #00000000;
+  opacity: 1;
+  border: none;
+  border-radius: 18px;
+  gap: 0px;
+}
+
+.bottom-nav-section button:nth-child(6):hover {
+  cursor: pointer;
+  color: #9095A0FF;
+  background: #EAECEFFF;
+}
+
+.bottom-nav-section button:nth-child(6):hover:active {
+  color: #9095A0FF;
+  background: #DEE1E6FF;
+}
+
+.bottom-nav-section button:nth-child(1):disabled {
+  opacity: 0.4;
+}

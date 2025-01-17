@@ -1,0 +1,25 @@
+.instagram-page {
+    margin: 64px 240px;
+    text-align: center;
+}
+
+.instagram-page p {
+    font-family: Nanum Myeongjo;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #323842FF;
+}
+
+.instagram-photo {
+    width: 250px;
+    height: 206px;
+}
+
+.instagram-posts {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 36px;
+    row-gap: 8px;
+    column-gap: 8px;
+}

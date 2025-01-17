@@ -1,0 +1,156 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 434px;
+    background: #1D2128FF;
+    padding: 96px 240px;
+}
+
+.article-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    min-height: 320px;
+}
+
+.article-1 div {
+    min-width: 180px;
+}
+
+.table-header {
+    display: flex;
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #DEE1E6FF;
+    margin-bottom: 14px;
+}
+
+.table-data {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #DEE1E6FF;
+    margin: 16px 0;
+}
+
+.lan-btn {
+    width: 128px;
+    height: 36px;
+    padding-left: 12px;
+    padding-right: 14px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    background: #00000000;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #DEE1E6FF;
+    border-style: solid;
+    outline: none;
+    margin-top: 24px;
+    color: #DEE1E6FF;
+}
+
+.lan-btn:hover {
+    cursor: pointer;
+    color: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+}
+
+.lan-btn:focus{
+    color: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+}
+
+.lan-btn:disabled {
+    color: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+}
+
+.lan-btn :disabled + .icon, .textbox :disabled + .icon + .icon {
+    fill: #FFFFFFFF;
+}
+
+h4 {
+    font-size: 44px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #DEE1E6FF;
+    margin-bottom: 16px;
+}
+
+.article-2 p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #DEE1E6FF;
+    margin: 8px 0;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe div {
+    display: flex;
+    align-items: center;
+    width: 304px;
+    height: 52px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    background: #00000000;
+    border-radius: 8px 0px 0px 8px;
+    border-width: 1px;
+    border-color: #BCC1CAFF;
+    border-style: solid;
+    outline: none;
+}
+
+.subscribe div input {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    background: #00000000;
+    outline: none;
+    color: #fff;
+    margin-left: 12px;
+}
+
+.subscribe button {
+    height: 52px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+    opacity: 1;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.subscribe button:hover {
+    cursor: pointer;
+    color: #FFFFFFFF;
+    background: #3D8C6DFF;
+  }
+
+.subscribe button:hover:active {
+    color: #FFFFFFFF;
+    background: #367C60FF;
+  }
+
+.subscribe button:disabled {
+    opacity: 0.4;
+}

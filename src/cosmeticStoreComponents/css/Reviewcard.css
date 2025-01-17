@@ -1,0 +1,22 @@
+.review-card {
+    width: 778px;
+    height: 98px;
+    background: #FFFFFF00;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+.reviewer-name {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #171A1FFF;
+    margin-right: 6px;
+}
+
+.reviewer-date {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #424955FF
+}

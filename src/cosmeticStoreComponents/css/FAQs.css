@@ -1,0 +1,17 @@
+.faqs-article {
+    margin: 0 240px;
+}
+
+.faqs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.faq {
+    border: 1px solid #DEE1E6FF;
+    border-radius: 4px;
+    width: 50%;
+    margin: 12px 0;
+    padding: 4px 8px;
+}

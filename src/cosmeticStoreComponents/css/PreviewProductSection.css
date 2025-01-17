@@ -1,0 +1,88 @@
+.prev-product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 240px;
+}
+
+.products-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prev-product-section h1 {
+    margin-top: 64px;
+}
+
+.tab-buttons {
+    display: flex;
+    margin: 30px 0;
+}
+
+.tab-buttons button:nth-child(1) {
+    width: 150.5px;
+    height: 36px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+    opacity: 1;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+}
+
+.tab-buttons button:nth-child(2) {
+    width: 150.5px;
+    height: 36px;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 1;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+}
+
+.tab-buttons button:nth-child(1):hover {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.tab-buttons button:nth-child(1):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.tab-buttons button:nth-child(1):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.tab-buttons button:nth-child(2):hover {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.tab-buttons button:nth-child(2):hover:active {
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+  }
+
+.tab-buttons button:nth-child(2):disabled {
+    color: #459D7AFF;
+    background: #FFFFFFFF;
+    opacity: 0.4;
+  }

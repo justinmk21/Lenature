@@ -1,0 +1,35 @@
+.nav-button {
+    position: absolute;
+    bottom: 660px;
+    right: 240px;
+    width: 100px;
+    height: 36px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #459D7AFF;
+    background: #00000000;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    color: #459D7AFF;
+    background: #DDF0E8FF;
+  }
+
+.nav-button:hover:active {
+    color: #459D7AFF;
+    background: #C5E6D9FF;
+  }
+
+.nav-button:disabled {
+    opacity: 0.4;
+  }

@@ -1,0 +1,132 @@
+.header-section {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+    background: #FFFFFFCC; /* white */
+    border-radius: 0px;
+  }
+
+.navbar {
+    display: flex;
+    font-family: Inter; /* Body */
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    top: 12px;
+    opacity: 0.4;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #BCC1CAFF;
+    border-style: solid;
+}
+.search-box input {
+    width: 164px;
+    height: 36px;
+    padding-left: 34px;
+    padding-right: 12px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    background: #00000000;
+    outline: none;
+  }
+
+.search-box input:hover {
+    color: #BCC1CAFF;
+    border-color: #A7ADB7FF;
+}
+
+.search-box input:focus {
+    color: #BCC1CAFF;
+    border-color: #9095A0FF;
+  }
+
+.search-box input :disabled {
+    color: #BCC1CAFF;
+    border-color: #BCC1CAFF;
+}
+
+.search-box :disabled + .icon, .textbox :disabled + .icon + .icon {
+    fill: #171A1FFF;
+  }
+
+.cart-button-container button {
+    top: 12px;
+    height: 36px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #171A1FFF;
+    background: #00000000;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+    gap: 6px;
+  }
+
+.cart-icon {
+    display: flex;
+    width: 80px;
+    height: 20px;
+    fill: #171A1FFF;
+  }
+
+.cart-button-container button:hover {
+    color: #171A1FFF;
+    background: #EAECEFFF;
+  }
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #171A1FFF;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFFFF;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.navbar a {
+    padding: 1px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #424955FF;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.header-article {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 240px;
+}

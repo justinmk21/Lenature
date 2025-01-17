@@ -1,0 +1,62 @@
+.front-page {
+    background-image:
+    url("../images/CosmeticFront.jpg");
+    height: 602px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front-page-heading {
+    font-size: 62px;
+    line-height: 82px;
+    font-weight: 800;
+    color: #323842FF;
+}
+
+.front-page-text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #323842FF;
+    margin: 24px 0;
+}
+
+.front-page-button {
+    width: 178px;
+    height: 52px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF; /* white */
+    background: #459D7AFF; /* primary-500 */
+    opacity: 1;
+    border: none;
+    border-radius: 8px; /* border-xl */
+}
+/* Hover */
+.front-page-button:hover {
+    cursor: pointer;
+    color: #FFFFFFFF; /* white */
+    background: #3D8C6DFF; /* primary-550 */
+  }
+  /* Pressed */
+.front-page-button:hover:active {
+    color: #FFFFFFFF; /* white */
+    background: #367C60FF; /* primary-600 */
+  }
+  /* Disabled */
+.front-page-button:disabled {
+    opacity: 0.4;
+  }
+
+.front-page-container {
+    display: grid;
+    padding-top: 204px;
+    margin-left: 240px;
+}

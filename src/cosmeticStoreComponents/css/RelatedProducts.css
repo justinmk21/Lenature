@@ -1,0 +1,14 @@
+.related-products-section h1 {
+    margin-left: 240px;
+    margin-top: 64px;
+    margin-bottom: 28px;
+}
+
+.related-products {
+    display: flex;
+    justify-content: space-between;
+    height: 668px;
+    background: #FFFFFFFF;
+    border-radius: 0px;
+    padding: 0 240px;
+}
