@@ -1,0 +1,133 @@
+.purchase-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 240px;
+}
+
+.purchase-page h1 {
+    margin-top: 62px;
+}
+
+.purchase-page > p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #9095A0FF;
+}
+
+.purchased {
+    padding: 24px;
+    width: 770px;
+    min-height: 740px;
+    background: #FFFFFFFF;
+    border-radius: 4px;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1F;
+}
+
+.product-summary {
+    width: 100%;
+    max-width: 723px;
+    height: 127px;
+    background: #FFFFFFFF;
+    border-radius: 4px;
+}
+
+.product-img-summary {
+    padding-right: 1px;
+}
+
+.product-img-summary img {
+    width: 101px;
+    height: 127px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.product-list-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 127px;
+}
+
+.product-list-summary p:nth-child(1) {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #323842FF;
+}
+
+.product-list-summary p:nth-child(2) {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #9095A0FF;
+    margin: 8px 0;
+}
+
+.product-list-summary p:nth-child(3) {
+    width: 65px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    opacity: 1;
+    background: #F3F4F6FF;
+    border-color: #00000000;
+    border-radius: 16px;
+}
+
+.summary-cost {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #171A1FFF;
+}
+
+.order-line {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #171A1FFF;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.continue-shopping {
+    height: 52px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #459D7AFF;
+    opacity: 1;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+}
+
+.continue-shopping:hover {
+    cursor: pointer;
+    color: #FFFFFFFF;
+    background: #3D8C6DFF;
+}
+
+.continue-shopping:hover:active {
+    color: #FFFFFFFF;
+    background: #367C60FF;
+}
+
+.continue-shopping:disabled {
+    opacity: 0.4;
+}

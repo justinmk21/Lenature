@@ -3,13 +3,22 @@ import { MdSearch, MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import filterIcon from './images/FilterIcon.svg';
 import { Flex } from '@chakra-ui/react';
 import ProductCard from './ProductCard';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ProductContext } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 function Shop() {
 
+    const navToDetailProduct = useNavigate();
+    const handleClickNav = (id) => {
+        navToDetailProduct(`/Detail/${id}`);
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
-    })
+    });
+
+    const Products = useContext(ProductContext);
 
     return (
         <section className='shop'>
@@ -72,10 +81,16 @@ function Shop() {
                 <div
                     className='products-section'
                     >
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
+                    {Products.map((product) => (
+                        <ProductCard
+                            key={product['id']}
+                            onClick={() => {handleClickNav(product['id'])}}
+                            productName={product.name}
+                            price={product.price}
+                            status={product.status}
+                            cartAdd={product}
+                            />
+                    ))}
                 </div>
             </article>
             <aside>

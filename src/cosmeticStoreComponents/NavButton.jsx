@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import './css/NavButton.css';
-function NavButton() {
+function NavButton({ onClick }) {
 
     return (
-        <button className='nav-button'>
+        <button
+            onClick={onClick}
+            className='nav-button'>
             see all
         </button>
     )

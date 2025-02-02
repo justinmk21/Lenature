@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { AccordionItem, AccordionItemContent, AccordionItemTrigger, AccordionRoot}
 from '@chakra-ui/react';
 import { MdArrowForward, MdArrowDownward } from 'react-icons/md';

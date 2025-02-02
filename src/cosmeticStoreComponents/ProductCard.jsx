@@ -1,9 +1,19 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import './css/ProductCard.css';
 import { MdShoppingCart } from 'react-icons/md';
 import product from './images/CBDOIL.png';
-import { useNavigate } from 'react-router';
-function ProductCard() {
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from './CartSlice';
+import { useSelector } from 'react-redux';
+
+function ProductCard({ productName, price, status, cartAdd, onClick }) {
+
+    const cartItems = useSelector(state => state.cart.cartItems)
+    const dispatch = useDispatch();
+    const handleAddToCart = product => {
+        dispatch(addItemToCart(product));
+    }
 
     function ProductState({ items }) {
 
@@ -18,33 +28,34 @@ function ProductCard() {
         )
     }
 
-    const navToDetailProduct = useNavigate();
-
-    const handleClickNav = () => {
-        navToDetailProduct('/Detail');
-    }
 
     return (
         <article
             className="product-card"
-            onClick={handleClickNav}
+            onClick={onClick}
             >
             <div className="product-img">
                 <ProductState
-                    items={'Best Seller'}
+                    items={status}
                     />
                 <img src={product} alt="product image"/>
             </div>
             <div className="product-details">
-                <h3>Product Title</h3>
+                <h3>{productName}</h3>
                 <p>Deserunt non fugiat aute cons</p>
                 <div className="product-prices" >
                     <div>
-                        <p>$32</p>
+                        <p>${price}</p>
                         <p>$42</p>
                     </div>
                     <div className="product-cart">
-                        <button>
+                        <button
+                            onClick={(event) => {
+                                event.stopPropagation();
+                                handleAddToCart(cartAdd);
+                            }}
+                            disabled={false}
+                            >
                             <MdShoppingCart color='#459D7AFF' size={'20'}/>
                         </button>
                     </div>

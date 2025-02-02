@@ -1,9 +1,17 @@
 import Logo from './images/LenatureLogo.svg';
 import { MdSearch, MdShoppingCart, MdPerson } from 'react-icons/md';
 import './css/HeaderSection.css'
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function HeaderSection() {
+
+    const cartItems = useSelector(state => state.cart.cartItems);
+
+    const navToCart = useNavigate(null);
+    const handleNavToCart = () => {
+        navToCart('/Checkout');
+    }
 
     return (
         <section
@@ -41,8 +49,8 @@ function HeaderSection() {
                         className='cart-button-container'
                         >
                         <button>
-                            <div className="cart-icon">
-                                <MdShoppingCart size={'20'}/>Cart (0)
+                            <div className="cart-icon" onClick={handleNavToCart}>
+                                <MdShoppingCart size={'20'}/>Cart ({ cartItems.length })
                             </div>
                         </button>
                     </div>

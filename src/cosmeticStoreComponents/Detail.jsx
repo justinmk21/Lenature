@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { Flex } from '@chakra-ui/react';
 import { MdStar, MdCheck, MdAddShoppingCart } from 'react-icons/md';
 import oil from './images/CBDOIL.png';
 import './css/Detail.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import img1 from './images/Img1.jpg';
 import img2 from './images/Img2.jpg';
 import img3 from './images/Img3.jpg';
@@ -13,10 +15,46 @@ import Ingredients from './Ingredients';
 import HowTo from './HowToUse';
 import Reviews from './Reviews';
 import FAQs from './FAQs';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItemToCart, decreaseItemQuantity, increaseItemQuantity, removeItemFromCart } from './CartSlice';
+import { ProductContext } from '../App';
+import { useParams } from 'react-router-dom';
 
 function Detail() {
 
+    const [count, setCount] = useState(1);
+
+    const { cartItems, totalPrice, totalItems } = useSelector(state => state.cart);
+
+    const Products = useContext(ProductContext);
+
+    const { id } = useParams();
+
+    const item = Products.find((product) => product['id'] === parseInt(id));
+
+    const dispatch = useDispatch();
+
+    const decreaseCount = () => {
+        if (count > 1) {
+            setCount(c => c - 1 );
+        }
+    }
+    const increaseCount = () => setCount(c => c + 1);
+
+    const handleAddItemToCart = product => {
+        dispatch(addItemToCart(product));
+    }
+    const handleIncreaseItemQuantity = product => {
+        dispatch(increaseItemQuantity(product));
+    }
+
     const [content, setContent] = useState('Benefits');
+
+    const checkout = useNavigate(null);
+    const handleNavClick = () => {
+        checkout('/Checkout');
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -41,13 +79,13 @@ function Detail() {
                     />
             </article>
             <article className="product-detail">
-                <h1>Product Name</h1>
+                <h1>{item.name}</h1>
                 <p>Aliquip fugiat ipsum nostrud ex et eu incididunt</p>
                 <Flex
                     className='product-detail-prices'
                     alignItems={'center'}
                     >
-                    <p>$32</p><p>$42</p>
+                    <p>${item.price}</p><p>$42</p>
                 </Flex>
                 <p>
                     In ullamco labore mollit et exercitation fugiat exercitation
@@ -148,22 +186,24 @@ function Detail() {
                     <Flex
                         className='quantity'
                         >
-                        <button>-</button>
-                        <button>0</button>
-                        <button>+</button>
+                        <button onClick={decreaseCount}>-</button>
+                        <button>{count}</button>
+                        <button onClick={increaseCount}>+</button>
                     </Flex>
                 </div>
                 <Flex
                     className='cart-checkout'
                     >
-                    <button>
+                    <button
+                        onClick={() => handleAddItemToCart(Products[item['id']])}
+                        >
                         <Flex
                             alignItems={'center'}
                             >
                             <MdAddShoppingCart size={'24'}/>Add to bag
                         </Flex>
                     </button>
-                    <button>Checkout</button>
+                    <button onClick={handleNavClick}>Checkout</button>
                 </Flex>
             </article>
         </section>
