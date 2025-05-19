@@ -23,6 +23,7 @@ function RelatedProducts() {
                                 productName={product.name}
                                 onClick={() => handleNavToDetail(product.id)}
                                 price={product.price}
+                                discountPrice={product.discounted_price}
                                 status={product.status}
                                 cartAdd={product}
                                 />

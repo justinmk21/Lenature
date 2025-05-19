@@ -1,9 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
+
 import { Flex } from '@chakra-ui/react';
 import { MdStar, MdCheck, MdAddShoppingCart } from 'react-icons/md';
 import oil from './images/CBDOIL.png';
-import './css/Detail.css';
 import { useContext, useEffect, useState } from 'react';
 import img1 from './images/Img1.jpg';
 import img2 from './images/Img2.jpg';
@@ -20,11 +18,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart, decreaseItemQuantity, increaseItemQuantity, removeItemFromCart } from './CartSlice';
 import { ProductContext } from '../App';
 import { useParams } from 'react-router-dom';
+import './css/Detail.css';
+import axios from 'axios';
+
 
 function Detail() {
 
     const [count, setCount] = useState(1);
-
+    const [products, setProducts] = useState('');
     const { cartItems, totalPrice, totalItems } = useSelector(state => state.cart);
 
     const Products = useContext(ProductContext);
@@ -32,6 +33,17 @@ function Detail() {
     const { id } = useParams();
 
     const item = Products.find((product) => product['id'] === parseInt(id));
+
+    useEffect(() => {
+        axios.get(`http://127.0.0.1:8000/products/`)
+        .then(response => {
+          setProducts(response.data.results);
+          console.log('fetched detail data',response.data.results);
+        })
+        .catch(error => {
+          console.log("There was an error fetching the data", error);
+        });
+      }, [id]);
 
     const dispatch = useDispatch();
 

@@ -33,7 +33,7 @@ function Checkout() {
     const [voucher, setVoucher] = useState(null);
     const [operator, setOperator] = useState('UPS');
     const [delivery, setDelivery] = useState('instant');
-    const deliveryFee = delivery === 'instant' ? 22 : 12;
+    const deliveryFee = delivery === 'instant' ? 22.00 : 12.00;
 
     const ProductCard = ({ order }) => (
         <Flex>
@@ -69,9 +69,9 @@ function Checkout() {
                     {Orders.map((product) => (
                         <tr key={product['id']} className='table-data-items'>
                             <td><ProductCard order={product.name}/></td>
-                            <td>${product.price}</td>
-                            <td>{product.quantity}</td>
-                            <td>${(parseFloat(product.quantity) * parseFloat(product.price)).toFixed(2)}</td>
+                            <td>${parseInt(product.price)}</td>
+                            <td>{parseInt(product.quantity)}</td>
+                            <td>${(parseInt(product.quantity) * parseInt(product.price))}</td>
                             <td>
                                 <MdDelete
                                     className='delete-icon'
@@ -125,7 +125,7 @@ function Checkout() {
                         </p>
                         <p>Est arrival:
                             { type === 'instant' ?
-                            'Today' : `${ new Date().getDay() }/${ new Date().getMonth() }`
+                            'Today' : `0${ new Date().getDay() }/0${ new Date().getMonth() }`
                             }
                         </p>
                     </div>

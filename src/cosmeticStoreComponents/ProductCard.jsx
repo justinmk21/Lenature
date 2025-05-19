@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { addItemToCart } from './CartSlice';
 import { useSelector } from 'react-redux';
 
-function ProductCard({ productName, price, status, cartAdd, onClick }) {
+function ProductCard({ productName, price, status, cartAdd, onClick, discountPrice }) {
 
     const cartItems = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function ProductCard({ productName, price, status, cartAdd, onClick }) {
     function ProductState({ items }) {
 
         return (
-            items === 'New' ? (
+            items === 'new' ? (
                 <span className='status' >
                     New
                 </span>
@@ -45,8 +45,8 @@ function ProductCard({ productName, price, status, cartAdd, onClick }) {
                 <p>Deserunt non fugiat aute cons</p>
                 <div className="product-prices" >
                     <div>
-                        <p>${price}</p>
-                        <p>$42</p>
+                        <p>${parseInt(price)}</p>
+                        <p>${parseInt(discountPrice)}</p>
                     </div>
                     <div className="product-cart">
                         <button

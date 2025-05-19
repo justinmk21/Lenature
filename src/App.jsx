@@ -1,8 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 
 import { Route, Routes } from 'react-router-dom';
-import { createContext } from 'react';
-import './App.css'
+import { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
 import EventPromo from './cosmeticStoreComponents/EventPromo'
 import Footer from './cosmeticStoreComponents/FooterSection'
 import FrontPage from './cosmeticStoreComponents/FrontPage'
@@ -18,6 +18,7 @@ import RelatedProducts from './cosmeticStoreComponents/RelatedProducts'
 import Promotions from './cosmeticStoreComponents/Promotions'
 import Purchase from './cosmeticStoreComponents/Purchase'
 import product from '../src/cosmeticStoreComponents/images/CBDOIL.png';
+import './App.css'
 
 export const ProductContext = createContext();
 
@@ -30,8 +31,26 @@ function App() {
         { id: 3, name: 'Product D', price: 45, status: '', proImg: product, quantity: 0 },
       ];
 
+      const [data, setData] = useState();
+      const [pages, setPages] = useState(1);
+
+      useEffect(() => {
+        axios.get('http://127.0.0.1:8000/products/')
+        .then(response => {
+          setData(response.data.results);
+          console.log(response.data.results);
+        })
+        .catch(error => {
+          console.log("There was an error fetching the data", error);
+        });
+      }, []);
+
+      useEffect(() => {
+        console.log('Products: ', data);
+      }, [data])
+
   return (
-    <ProductContext.Provider value={products}>
+    <ProductContext.Provider value={data}>
       <HeaderSection/>
       <Routes>
         <Route path='/Lenature' element={

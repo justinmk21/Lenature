@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 function Purchase() {
 
-    const { cartItems, totalPrice, totalItems } = useSelector(state => state.cart);
+    const { cartItems, totalPrice } = useSelector(state => state.cart);
 
     const navToShop = useNavigate();
     const handleNavToShop = () => {
@@ -57,7 +57,7 @@ function Purchase() {
             className='purchase-page'
             >
             <h1>
-                Thank you for our purchase!
+                Thank you for your purchase!
             </h1>
             <p style={{ marginBottom: '36px' }}>
                 You will receive a confirmation letter through your email
