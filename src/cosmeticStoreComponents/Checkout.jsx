@@ -35,11 +35,11 @@ function Checkout() {
     const [delivery, setDelivery] = useState('instant');
     const deliveryFee = delivery === 'instant' ? 22.00 : 12.00;
 
-    const ProductCard = ({ order }) => (
+    const ProductCard = ({ order, img }) => (
         <Flex>
             <img
                 className='product-prev-img'
-                src={oil}
+                src={img}
                 alt='Product Image'
                 />
             <div>
@@ -68,7 +68,7 @@ function Checkout() {
                 <tbody className='checkout-table-data'>
                     {Orders.map((product) => (
                         <tr key={product['id']} className='table-data-items'>
-                            <td><ProductCard order={product.name}/></td>
+                            <td><ProductCard order={product.name} img={product.image} /></td>
                             <td>${parseInt(product.price)}</td>
                             <td>{parseInt(product.quantity)}</td>
                             <td>${(parseInt(product.quantity) * parseInt(product.price))}</td>

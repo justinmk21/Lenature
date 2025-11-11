@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Flex } from '@chakra-ui/react';
-import { MdCalendarMonth, MdPerson2, MdMoney, MdCurrencyPound } from 'react-icons/md';
+import { MdCalendarMonth, MdPerson2, MdMoney, MdCurrencyPound, MdCurrencyExchange } from 'react-icons/md';
 import { BanknotesIcon } from '@heroicons/react/24/outline';
 import { LuNotebookText } from 'react-icons/lu';
 import './css/Purchase.css';
@@ -121,7 +121,7 @@ function Purchase() {
                         alignItems={'flex-start'}
                         margin={'25px 0'}
                         >
-                        <MdCurrencyPound size={'24'} color='#459D7AFF'/>
+                        <MdCurrencyExchange size={'24'} color='#459D7AFF'/>
                         <p style={{ marginLeft: '12px' }}>Total</p>
                     </Flex>
                     <p

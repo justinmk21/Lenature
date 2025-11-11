@@ -35,15 +35,17 @@ function Detail() {
     const item = Products.find((product) => product['id'] === parseInt(id));
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/products/`)
+        axios.get(`http://127.0.0.1:8000/products/${id}`)
         .then(response => {
-          setProducts(response.data.results);
-          console.log('fetched detail data',response.data.results);
+          setProducts(response.data);
+          console.log('fetched detail data',response.data);
         })
         .catch(error => {
           console.log("There was an error fetching the data", error);
         });
       }, [id]);
+    
+    
 
     const dispatch = useDispatch();
 
@@ -86,18 +88,18 @@ function Detail() {
                 </div>
                 <img
                     className='display-img'
-                    src={oil}
+                    src={products.image}
                     alt="product image"
                     />
             </article>
             <article className="product-detail">
-                <h1>{item.name}</h1>
+                <h1>{products.name}</h1>
                 <p>Aliquip fugiat ipsum nostrud ex et eu incididunt</p>
                 <Flex
                     className='product-detail-prices'
                     alignItems={'center'}
                     >
-                    <p>${item.price}</p><p>$42</p>
+                    <p>${products.price}</p><p>$42</p>
                 </Flex>
                 <p>
                     In ullamco labore mollit et exercitation fugiat exercitation
@@ -207,7 +209,7 @@ function Detail() {
                     className='cart-checkout'
                     >
                     <button
-                        onClick={() => handleAddItemToCart(Products[item['id']])}
+                        onClick={() => handleAddItemToCart(products['id'])}
                         >
                         <Flex
                             alignItems={'center'}

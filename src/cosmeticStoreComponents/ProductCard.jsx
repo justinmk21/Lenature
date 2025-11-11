@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { addItemToCart } from './CartSlice';
 import { useSelector } from 'react-redux';
 
-function ProductCard({ productName, price, status, cartAdd, onClick, discountPrice }) {
+function ProductCard({ productName, price, status, cartAdd, onClick, discountPrice, img }) {
 
     const cartItems = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch();
@@ -38,7 +38,7 @@ function ProductCard({ productName, price, status, cartAdd, onClick, discountPri
                 <ProductState
                     items={status}
                     />
-                <img src={product} alt="product image"/>
+                <img src={img} alt="product image"/>
             </div>
             <div className="product-details">
                 <h3>{productName}</h3>

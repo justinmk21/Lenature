@@ -97,11 +97,14 @@ function Shop() {
                             <Menu.Item value='new-txt-a'>
                                 Ascending Order <Menu.ItemCommand>E</Menu.ItemCommand>
                             </Menu.Item>
-                            <Menu.Item value='new-file-a'>
-                                New File... <Menu.ItemCommand>N</Menu.ItemCommand>
-                            </Menu.Item>
-                            <Menu.Item value='new-win-a'>
+                            <Menu.Item value='new-win-b'>
                                 Descending Order <Menu.ItemCommand>W</Menu.ItemCommand>
+                            </Menu.Item>
+                            <Menu.Item value='new-file-c'>
+                                Price (Low) <Menu.ItemCommand>N</Menu.ItemCommand>
+                            </Menu.Item>
+                            <Menu.Item value='new-file-d'>
+                                Price (High) <Menu.ItemCommand>N</Menu.ItemCommand>
                             </Menu.Item>
                         </Menu.Content>
                     </Menu.Positioner>
@@ -188,6 +191,7 @@ function Shop() {
                                 discountPrice={product['discounted_price']}
                                 status={product.status}
                                 cartAdd={product}
+                                img={product.image}
                                 />
                             ))
                     }

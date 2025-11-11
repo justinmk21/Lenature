@@ -6,7 +6,8 @@
 }
 
 .products-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 276px);
   justify-content: space-between;
   width: 100%;
 }

@@ -18,7 +18,7 @@ function InstagramPage() {
     return (
         <section className="instagram-page">
             <h1>Instagram</h1>
-            <p>@yourinstagram_offical</p>
+            <p>@Lenature_offical</p>
             <article className='instagram-posts'>
                 {Instagram.map((picture) => (
                     <img
@@ -33,4 +33,4 @@ function InstagramPage() {
     )
 }
 
-export default InstagramPage
+export default InstagramPage;

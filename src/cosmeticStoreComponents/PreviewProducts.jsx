@@ -4,9 +4,11 @@ import ProductCard from './ProductCard';
 import { ProductContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 import { Skeleton, Text } from '@chakra-ui/react';
+import axios from 'axios';
 
 
 function PreviewProducts() {
+    const  [products, setProducts] = useState('');
 
     const Products = useContext(ProductContext);
 
@@ -18,6 +20,21 @@ function PreviewProducts() {
     }
 
     //useEffect(()=>console.log(Products.length))
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/products/')
+        .then(response => {
+          setProducts(response.data.results);
+          console.log(response.data.results);
+        })
+        .catch(error => {
+          console.log("There was an error fetching the data", error);
+        });
+      }, []);
+
+      useEffect(() => {
+        console.log('Products: ', products);
+      }, [products]);
 
     return (
         <section className="prev-product-section">
@@ -33,7 +50,7 @@ function PreviewProducts() {
             <div
                 className='products-section'
                 >
-                {Products.length === 0 ?
+                {products.length === 0 ?
                     <>
                     <Skeleton height={'464px'} width={'267px'}>
                         <Text>pulse</Text>
@@ -49,7 +66,7 @@ function PreviewProducts() {
                     </Skeleton>
                     </>
                     :
-                    Products.map((product) => (
+                    products.map((product) => (
                         <ProductCard
                             key={product['id']}
                             onClick={() => {handleNavToDetail(product['id'])}}
@@ -58,6 +75,7 @@ function PreviewProducts() {
                             discountPrice={product.discounted_price}
                             status={product.status}
                             cartAdd={product}
+                            img={product.image}
                             />
                     ))
                 }
