@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     min-height: 823px;
-    padding: 0 240px;
     margin-top: 104px; /* it must change to 134px */
+    max-width: 1440px;
+    width: 100%;
 }
 
 .product-image {
@@ -275,16 +276,17 @@
   }
 
 .tab-section {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   font-family: Inter;
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
-  background: #FFFFFFFF;
+  background: #FFF;
   opacity: 1;
   border-radius: 4px;
-  margin: 0 423px;
   margin-bottom: 34px;
 }
 
@@ -503,5 +505,9 @@
 }
 
 .product-details-extra {
+  width: 100%;
+  max-width: 1440px;
   min-height: 768px;
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,8 +1,15 @@
+.product-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .prev-product-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 240px;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .products-section {

@@ -1,5 +1,6 @@
 .promotion-page {
-    margin: 0 240px;
+    display: flex;
+    justify-content: center;
 }
 
 .promotion-article-1 {

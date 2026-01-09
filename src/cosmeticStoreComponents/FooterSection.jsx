@@ -50,59 +50,62 @@ function Footer() {
 
     return (
         <footer className="footer">
-            <article
-                className='article-1'
-                >
-                <div
-                    style={{ display: 'flex', flexDirection: 'column' }}
+            <Flex width={'100%'} maxWidth={'1440px'} justifyContent={'space-between'}>
+                <article
+                    className='article-1'
                     >
-                    <Table heading={'About'} links={linksData}/>
-                    <select className="lan-btn">
-                        <option
-                            className='lan-btn-content'
-                            >
-                            English
-                        </option>
-                        <option>Sepedi</option>
-                    </select>
-                </div>
-                <div>
-                    <Table heading={'Help'} links={HelpLinks} />
-                </div>
-                <div>
-                    <Table heading={'Contact'} links={Contact} />
-                </div>
-            </article>
-            <article
-                className='article-2'
-                >
-                <h4>Receive new Promotions</h4>
-                <p>
-                    Duis ea tempor commodo amet reprehende
-                </p>
-                <div
-                    className='subscribe'
-                    >
-                    <div>
-                        <MdEmail size={'20'} color='white'/>
-                        <input
-                            placeholder='Enter your email'
-                        />
+                    <div
+                        style={{ display: 'flex', flexDirection: 'column' }}
+                        >
+                        <Table heading={'About'} links={linksData}/>
+                        <select className="lan-btn">
+                            <option
+                                className='lan-btn-content'
+                                >
+                                English
+                            </option>
+                            <option>Sepedi</option>
+                        </select>
                     </div>
-                    <button>Subscribe</button>
-                </div>
-                <Flex
-                    alignItems={'center'}
-                    gap={'4'}
-                    margin={'32px 0'}
+                    <div>
+                        <Table heading={'Help'} links={HelpLinks} />
+                    </div>
+                    <div>
+                        <Table heading={'Contact'} links={Contact} />
+                    </div>
+                </article>
+
+                <article
+                    className='article-2'
                     >
-                    <LuTwitter color='#2EBAE8FF' size={'24'}/>
-                    <LuFacebook color='#2E6FE8FF' size={'24'}/>
-                    <LuLinkedin color='#7797E4FF' size={'24'}/>
-                    <LuYoutube color='#E82E2EFF' size={'24'}/>
-                </Flex>
-                <p>{new Date().getFullYear()} Brand, Inc. Privacy Terms Sitemap</p>
-            </article>
+                    <h4>Receive new Promotions</h4>
+                    <p>
+                        Duis ea tempor commodo amet reprehende
+                    </p>
+                    <div
+                        className='subscribe'
+                        >
+                        <div>
+                            <MdEmail size={'20'} color='white'/>
+                            <input
+                                placeholder='Enter your email'
+                            />
+                        </div>
+                        <button>Subscribe</button>
+                    </div>
+                    <Flex
+                        alignItems={'center'}
+                        gap={'4'}
+                        margin={'32px 0'}
+                        >
+                        <LuTwitter color='#2EBAE8FF' size={'24'}/>
+                        <LuFacebook color='#2E6FE8FF' size={'24'}/>
+                        <LuLinkedin color='#7797E4FF' size={'24'}/>
+                        <LuYoutube color='#E82E2EFF' size={'24'}/>
+                    </Flex>
+                    <p>{new Date().getFullYear()} Brand, Inc. Privacy Terms Sitemap</p>
+                </article>
+            </Flex>
         </footer>
     )
 }

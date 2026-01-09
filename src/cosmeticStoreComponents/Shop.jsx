@@ -116,17 +116,21 @@ function Shop() {
     return (
         <section className='shop'>
             <article className='shop-img'>
-                <h1>Gift for your skin</h1>
-                <p>
-                    Aliquip fugiat ipsum nostrud ex et eu incididunt quis minim
-                    dolore excepteur voluptate
-                </p>
+                <Flex width={"100%"} maxWidth={"1440px"} flexDirection={'column'} >
+                    <h1>Gift for your skin</h1>
+                    <p>
+                        Aliquip fugiat ipsum nostrud ex et eu incididunt quis minim
+                        dolore excepteur voluptate
+                    </p>
+                </Flex>
+
             </article>
             <article className='shopping'>
                 <Flex
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    margin={'0 240px'}
+                    width={'100%'}
+                    maxWidth={'1440px'}
                     marginTop={'64px'}
                     marginBottom={'56px'}
                     >
@@ -161,41 +165,44 @@ function Shop() {
                 </Flex>
             </article>
             <article
-                style={{ margin: '0 240px' }}
+                className='shop-items'
                 >
-                <div
-                    className='products-section'
-                    >
-                    {products.length === 0 ?
-                        <>
-                            <Skeleton height={'464px'} width={'267px'}>
-                                <Text>pulse</Text>
-                            </Skeleton>
-                            <Skeleton height={'464px'} width={'267px'}>
-                                <Text>pulse</Text>
-                            </Skeleton>
-                            <Skeleton height={'464px'} width={'267px'}>
-                                <Text>pulse</Text>
-                            </Skeleton>
-                            <Skeleton height={'464px'} width={'267px'}>
-                                <Text>pulse</Text>
-                            </Skeleton>
-                        </>
-                        :
-                        products.map((product) => (
-                            <ProductCard
-                                key={product['id']}
-                                onClick={() => {handleClickNav(product['id'])}}
-                                productName={product.name}
-                                price={product.price}
-                                discountPrice={product['discounted_price']}
-                                status={product.status}
-                                cartAdd={product}
-                                img={product.image}
-                                />
-                            ))
-                    }
-                </div>
+                <Flex width={'100%'} maxWidth={'1440px'} >
+                    <div
+                        className='products-section'
+                        >
+                        {products.length === 0 ?
+                            <>
+                                <Skeleton height={'464px'} width={'267px'}>
+                                    <Text>pulse</Text>
+                                </Skeleton>
+                                <Skeleton height={'464px'} width={'267px'}>
+                                    <Text>pulse</Text>
+                                </Skeleton>
+                                <Skeleton height={'464px'} width={'267px'}>
+                                    <Text>pulse</Text>
+                                </Skeleton>
+                                <Skeleton height={'464px'} width={'267px'}>
+                                    <Text>pulse</Text>
+                                </Skeleton>
+                            </>
+                            :
+                            products.map((product) => (
+                                <ProductCard
+                                    key={product['id']}
+                                    onClick={() => {handleClickNav(product['id'])}}
+                                    productName={product.name}
+                                    price={product.price}
+                                    discountPrice={product['discounted_price']}
+                                    status={product.status}
+                                    cartAdd={product}
+                                    img={product.image}
+                                    />
+                                ))
+                        }
+                    </div>
+                </Flex>
+                
             </article>
             <aside>
                 <div className='bottom-nav-section'>

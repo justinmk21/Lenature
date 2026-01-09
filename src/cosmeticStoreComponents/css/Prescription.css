@@ -1,9 +1,7 @@
 .prescription-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 128px;
-    margin-left: 240px;
-    margin-right: 240px;
     min-height: 382px;
 }
 

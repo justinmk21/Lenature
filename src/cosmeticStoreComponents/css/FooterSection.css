@@ -1,9 +1,9 @@
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 434px;
     background: #1D2128FF;
-    padding: 96px 240px;
+    padding: 96px 0;
 }
 
 .article-1 {

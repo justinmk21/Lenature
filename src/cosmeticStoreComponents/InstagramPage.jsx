@@ -16,19 +16,22 @@ function InstagramPage() {
     const Instagram = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12]
 
     return (
-        <section className="instagram-page">
-            <h1>Instagram</h1>
-            <p>@Lenature_offical</p>
-            <article className='instagram-posts'>
-                {Instagram.map((picture) => (
-                    <img
-                        className='instagram-photo'
-                        key={picture}
-                        src={picture}
-                        alt='instagram photos'
-                        />
-                ))}
-            </article>
+        <section className="instagram">
+            <div className='instagram-page'>
+                <h1>Instagram</h1>
+                <p>@Lenature_offical</p>
+                <article className='instagram-posts'>
+                    {Instagram.map((picture) => (
+                        <img
+                            className='instagram-photo'
+                            key={picture}
+                            src={picture}
+                            alt='instagram photos'
+                            />
+                    ))}
+                </article>
+            </div>
+           
         </section>
     )
 }

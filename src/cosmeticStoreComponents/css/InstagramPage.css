@@ -1,5 +1,12 @@
+.instagram {
+    display: flex;
+    justify-content: center;
+}
+
 .instagram-page {
-    margin: 64px 240px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 64px 0;
     text-align: center;
 }
 

@@ -75,7 +75,7 @@ function Detail() {
     },[]);
 
     return (
-        <>
+        <Flex flexDirection={'column'} alignItems={'center'}> 
         <section className="detail-section">
             <article className='product-image'>
                 <div
@@ -99,7 +99,7 @@ function Detail() {
                     className='product-detail-prices'
                     alignItems={'center'}
                     >
-                    <p>${products.price}</p><p>$42</p>
+                    <p>R{products.price}</p><p>R42</p>
                 </Flex>
                 <p>
                     In ullamco labore mollit et exercitation fugiat exercitation
@@ -271,7 +271,7 @@ function Detail() {
             {content === 'Reviews' && <Reviews/>}
             {content === 'FAQs' && <FAQs/>}
         </section>
-        </>
+        </Flex>
     )
 }
 

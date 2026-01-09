@@ -130,7 +130,7 @@ function Purchase() {
                             fontWeight: '700',
                         }}
                         >
-                        ${totalPrice}
+                        R{totalPrice}
                     </p>
                 </Flex>
                 <h6 className='order-line'>Order line</h6>
@@ -142,7 +142,7 @@ function Purchase() {
                         ProductName={product['name']}
                         size={'50 ML'}
                         NoItems={`${product['quantity']} items`}
-                        img={oil}
+                        img={product['image']}
                         price={product['price']}
                         />
                     <hr style={{ margin: '20px 0' }}></hr>

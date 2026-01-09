@@ -45,8 +45,8 @@ function ProductCard({ productName, price, status, cartAdd, onClick, discountPri
                 <p>Deserunt non fugiat aute cons</p>
                 <div className="product-prices" >
                     <div>
-                        <p>${parseInt(price)}</p>
-                        <p>${parseInt(discountPrice)}</p>
+                        <p>R{parseInt(price)}</p>
+                        <p>R{parseInt(discountPrice)}</p>
                     </div>
                     <div className="product-cart">
                         <button

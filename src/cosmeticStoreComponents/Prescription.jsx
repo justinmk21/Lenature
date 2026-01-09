@@ -22,46 +22,48 @@ function PrescriptionPage() {
 
     return (
         <section className="prescription-page">
-            <article className="prescription-text">
-                <h1>Read What&apos;s New</h1>
-                <p>
-                    Sint consequat in ipsum irure adipisicing dolore culpa
-                    incididunt. Veniam elit magna anim ipsum eiusmod eu
-                </p>
-                <Flex
-                    justifyContent={'space-between'}
-                    width={'366px'}
-                    marginTop={'100px'}
-                    alignItems={'center'}
-                    >
-                    <button className='explore-btn'>
-                        Explore All
-                    </button>
+            <Flex width={"100%"} maxWidth={'1440px'} justifyContent={'space-between'}>
+                <article className="prescription-text">
+                    <h1>Read What&apos;s New</h1>
+                    <p>
+                        Sint consequat in ipsum irure adipisicing dolore culpa
+                        incididunt. Veniam elit magna anim ipsum eiusmod eu
+                    </p>
                     <Flex
-                        className='arrow-btns'
-                        width={'104px'}
-                        height={'52px'}
+                        justifyContent={'space-between'}
+                        width={'366px'}
+                        marginTop={'100px'}
                         alignItems={'center'}
-                        justifyContent={'center'}
                         >
-                        <button>
-                            <MdArrowBack
-                                size={'20'}
-                                color='#459D7AFF'
-                                />
+                        <button className='explore-btn'>
+                            Explore All
                         </button>
-                        <button>
-                            <MdArrowForward
-                                size={'20'}
-                                color='#459D7AFF'
-                                opacity={'0.4'}
-                                />
-                        </button>
+                        <Flex
+                            className='arrow-btns'
+                            width={'104px'}
+                            height={'52px'}
+                            alignItems={'center'}
+                            justifyContent={'center'}
+                            >
+                            <button>
+                                <MdArrowBack
+                                    size={'20'}
+                                    color='#459D7AFF'
+                                    />
+                            </button>
+                            <button>
+                                <MdArrowForward
+                                    size={'20'}
+                                    color='#459D7AFF'
+                                    opacity={'0.4'}
+                                    />
+                            </button>
+                        </Flex>
                     </Flex>
-                </Flex>
-            </article>
-            <PrescriptionCard/>
-            <PrescriptionCard/>
+                </article>
+                <PrescriptionCard/>
+                <PrescriptionCard/>
+            </Flex>
         </section>
     )
 }

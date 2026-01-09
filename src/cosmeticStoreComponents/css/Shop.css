@@ -1,28 +1,35 @@
 .shop-img {
-    position: relative;
     background-image: url('../images/ShopImg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 390px;width: 1920px;
+    min-height: 390px;
+    display: flex;
+    justify-content: center;
 }
 
 .shop-img h1 {
-    position: absolute;
-    margin-left: 240px;
-    top: 82px;
+    padding-top: 82px;
 }
 
 .shop-img p {
-    position: absolute;
     width: 447px;
     font-family: Inter;
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
     color: #323842FF;
-    margin-left: 240px;
-    top: 172px;
+    
+}
+
+.shopping {
+  display: flex;
+  justify-content: center;
+}
+
+.shop-items {
+  display: flex;
+  justify-content: center;
 }
 
 .shop-nav-section {

@@ -1,4 +1,6 @@
 .front-page {
+    display: flex;
+    justify-content: center;
     background-image:
     url("../images/CosmeticFront.jpg");
     height: 602px;
@@ -56,7 +58,7 @@
   }
 
 .front-page-container {
-    display: grid;
     padding-top: 204px;
-    margin-left: 240px;
+    width: 100%;
+    max-width: 1440px;
 }

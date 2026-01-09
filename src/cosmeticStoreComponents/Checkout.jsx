@@ -69,9 +69,9 @@ function Checkout() {
                     {Orders.map((product) => (
                         <tr key={product['id']} className='table-data-items'>
                             <td><ProductCard order={product.name} img={product.image} /></td>
-                            <td>${parseInt(product.price)}</td>
+                            <td>R{parseInt(product.price)}</td>
                             <td>{parseInt(product.quantity)}</td>
-                            <td>${(parseInt(product.quantity) * parseInt(product.price))}</td>
+                            <td>R{(parseInt(product.quantity) * parseInt(product.price))}</td>
                             <td>
                                 <MdDelete
                                     className='delete-icon'
@@ -117,7 +117,7 @@ function Checkout() {
                                 color: isSelected ? '#459D7AFF' : '#171A1FFF',
                             }}
                             >
-                            { type === 'instant' ? '$22' : '$12' }
+                            { type === 'instant' ? 'R22' : 'R12' }
                         </p>
                         <p>
                             { type === 'instant' ? 'Instant delivery'
@@ -143,8 +143,8 @@ function Checkout() {
     return (
         <section className="Checkout">
             <h1>My Shopping  ({cartItems.length} items)</h1>
-            <Flex justifyContent={'space-between'}>
-                <div>
+            <Flex justifyContent={'space-between'} width={'100%'} maxWidth={'1440px'} >
+                <div style={{  }}>
                     <article
                         style={{ marginBottom: '16px' }}
                         className='checkout-container'
@@ -336,7 +336,7 @@ function Checkout() {
                             Apply
                         </button>
                     </Flex>
-                    {discount == null ? '' : <span className='span-off'>${voucher} off</span>}
+                    {discount == null ? '' : <span className='span-off'>R{voucher} off</span>}
                     <Flex
                         className='delivery-header'
                         margin={'18px 0'}
@@ -362,7 +362,7 @@ function Checkout() {
                                 fontWeight: 700,
                                 color: '#171A1FFF',
                             }}
-                            >${totalPrice}</p>
+                            >R{totalPrice}</p>
                     </Flex>
                     <Flex
                         justifyContent={'space-between'}
@@ -385,7 +385,7 @@ function Checkout() {
                                 fontWeight: 700,
                                 color: '#171A1FFF',
                             }}
-                            >{discount == null ? '$0' : `-$${discount}`}</p>
+                            >{discount == null ? 'R0' : `-R${discount}`}</p>
                     </Flex>
                     <Flex
                         justifyContent={'space-between'}
@@ -405,7 +405,7 @@ function Checkout() {
                                 fontWeight: 700,
                                 color: '#171A1FFF',
                             }}
-                            >${ delivery === 'instant' ? 22 : 12 }</p>
+                            >R{ delivery === 'instant' ? 22 : 12 }</p>
                     </Flex>
                     <hr style={{ margin: '12px 0' }}></hr>
                     <Flex
@@ -427,7 +427,7 @@ function Checkout() {
                             fontWight: 700,
                             color: '#FFA91EFF',
                         }}>
-                            ${ totalPrice == 0 ? '0' : totalPrice + deliveryFee - discount }
+                            R{ totalPrice == 0 ? '0' : totalPrice + deliveryFee - discount }
                         </p>
                     </Flex>
                     <button

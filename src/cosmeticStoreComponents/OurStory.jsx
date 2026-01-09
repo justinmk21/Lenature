@@ -14,11 +14,13 @@ function OurStory() {
 
     return (
         <section className="story-section">
-            <h1>Our Story</h1><NavButton onClick={handleNavToStory}/>
+            <h1>Our Story</h1>
+            <NavButton onClick={handleNavToStory}/>
             <article className='story-image'>
                 <Flex
                     className='video-btn'
                     alignItems={'center'}
+
                     >
                     Watch Video
                     <MdPlayArrow size={'20'} color='white'/>
