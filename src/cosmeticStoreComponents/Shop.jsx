@@ -30,7 +30,7 @@ function Shop() {
     };
 
     useEffect((pageNum=1) => {
-        axios.get(`http://34.71.229.132/products/?page=${pageNum}`)
+        axios.get(`http://34.71.229.132/api/products/?page=${pageNum}`)
         .then(response => {
           setProducts(response.data.results);
           console.log('fetch page data',response.data.results);
