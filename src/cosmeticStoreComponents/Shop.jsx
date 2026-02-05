@@ -22,7 +22,7 @@ function Shop() {
 
     const fetchItems = async (pageNum) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/products/?page=${pageNum}`);
+            const response = await axios.get(`http://34.71.229.132/products/?page=${pageNum}`);
             setProducts(response.data.results);
         } catch (error) {
             console.log('Error fetching data', error);
@@ -30,7 +30,7 @@ function Shop() {
     };
 
     useEffect((pageNum=1) => {
-        axios.get(`http://127.0.0.1:8000/products/?page=${pageNum}`)
+        axios.get(`http://34.71.229.132/products/?page=${pageNum}`)
         .then(response => {
           setProducts(response.data.results);
           console.log('fetch page data',response.data.results);
@@ -42,7 +42,7 @@ function Shop() {
 
     const searchItems = async (query) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/products/?search=${query}`);
+            const response = await axios.get(`http://34.71.229.132/products/?search=${query}`);
             setSearch(response.data.results);
             setProducts(response.data.results);
         } catch (error) {

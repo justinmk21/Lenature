@@ -35,7 +35,7 @@ function Detail() {
     const item = Products.find((product) => product['id'] === parseInt(id));
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/products/${id}`)
+        axios.get(`http://34.71.229.132/products/${id}`)
         .then(response => {
           setProducts(response.data);
           console.log('fetched detail data',response.data);

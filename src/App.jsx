@@ -35,7 +35,7 @@ function App() {
       const [pages, setPages] = useState(1);
 
       useEffect(() => {
-        axios.get('http://127.0.0.1:8000/products/')
+        axios.get('http://34.71.229.132/products/')
         .then(response => {
           setData(response.data.results);
           console.log(response.data.results);
