@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Flex } from '@chakra-ui/react';
-import './css/ReviewCard.css';
+import './css/Reviewcard.css'
 import { MdPerson, MdStar } from 'react-icons/md';
 
 function ReviewCard({ name, date, review }) {
