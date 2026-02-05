@@ -22,7 +22,7 @@ function Shop() {
 
     const fetchItems = async (pageNum) => {
         try {
-            const response = await axios.get(`http://34.71.229.132/products/?page=${pageNum}`);
+            const response = await axios.get(`http://34.71.229.132/api/products/?page=${pageNum}`);
             setProducts(response.data.results);
         } catch (error) {
             console.log('Error fetching data', error);
@@ -42,7 +42,7 @@ function Shop() {
 
     const searchItems = async (query) => {
         try {
-            const response = await axios.get(`http://34.71.229.132/products/?search=${query}`);
+            const response = await axios.get(`http://34.71.229.132/api/products/?search=${query}`);
             setSearch(response.data.results);
             setProducts(response.data.results);
         } catch (error) {

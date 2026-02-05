@@ -22,7 +22,7 @@ function PreviewProducts() {
 
   useEffect(() => {
     axios
-      .get("http://34.71.229.132/products/")
+      .get("http://34.71.229.132/api/products/")
       .then((response) => {
         setProducts(response.data.results);
         console.log(response.data.results);
